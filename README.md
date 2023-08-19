@@ -1,5 +1,5 @@
 # STAR-SHOOTER
-Star Shooter v1.0 is Space Invader inspired fixed shooter game, in which player shoots the 'invaders' or aliens with a lasers fired through StarShip. The invaders keeps spawning in different patterns until a win or lose event is triggered.
+Star Shooter v1.0 is Space Invader inspired fixed shooter game, in which player shoots the 'invaders' or aliens via lasers fired through StarShip. The invaders keeps spawning in different patterns until a win or lose event is triggered.
 this is my first video game.
 
 ## Controls
@@ -8,6 +8,7 @@ this is my first video game.
 - Shoot Laser : Space
 
 ## Game Framework
+Player has 3 lives displayed on top right
 Player win if :
 - Required score is reached
 
