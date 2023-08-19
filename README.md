@@ -3,13 +3,13 @@ Star Shooter v1.0 is Space Invader inspired fixed shooter game, in which player 
 this is my first video game.
 
 ## Controls
--move left - A
--move right - D
--shoot lasers - Space
+- Move right : D
+- Move Left :  A
+- Shoot Laser : Space
 
 ## Game Framework
 Player win if :
--Required score is reached
+- Required score is reached
 
 Player loses if :
 - Invader reaches boundary on player's side or
