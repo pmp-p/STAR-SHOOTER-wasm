@@ -95,13 +95,6 @@ class Game:
                         print("========= GAME OVER ========== ")
                         self.game_state = 3
                         self.game_active = False
-                        
-            # if pygame.sprite.spritecollide(lasers, self.main_ship_group, True):
-            #     self.main_ship_group.empty()
-            #     self.alienGroup.empty()
-            #     self.game_active = False
-            #     self.game_state = 3
-            #     break
                 
     def alien_shoot(self):
         if self.alienGroup.sprites():
@@ -114,22 +107,22 @@ class Game:
     def state_manager(self):
         keys = pygame.key.get_pressed()
 
-        
-
         if self.game_state == 1:
             if keys[pygame.K_SPACE]:
                 self.game_active = True
             screen.blit(self.background, (0,0))
-            text = self.text_font.render("SPACE INVADERS", False, 'Yellow')
-            text1 = self.text_font1.render("Press Space to start", False, 'Yellow')
+            text = self.text_font.render("STAR SHOOTER", False, 'Yellow')
+            text1 = self.text_font1.render("Press Space to start", False, 'White')
             screen.blit(text, (screen_width/2 - 150, screen_height/2 - 50))
             screen.blit(text1, (screen_width/2 - 150, screen_height/2 ))
+            
         elif self.game_state == 2:
             screen.blit(self.background, (0,0))
-            text3 = self.text_font.render("VICTORYS", False, 'Yellow')
+            text3 = self.text_font.render("VICTORY!", False, 'Yellow')
             screen.blit(text3, (screen_width/2 - 150 + 50, screen_height/2 - 50))
             score_final = self.text_font1.render("SCORE : " + str(self.score),False, 'White')
             screen.blit(score_final,(screen_width/2 - 150 + 50, screen_height/2 - 50 + 50))
+            
         elif self.game_state == 3:
             screen.blit(self.background, (0,0))
             text3 = self.text_font.render("GAME OVER", False, 'Yellow')
@@ -174,6 +167,7 @@ if __name__ == '__main__':
     screen_height = 160*2
 
     screen = pygame.display.set_mode((screen_width, screen_height))
+    title = pygame.display.set_caption('Star Shooter')
     clock = pygame.time.Clock()
     game = Game() 
 
@@ -189,15 +183,11 @@ if __name__ == '__main__':
             if game.game_active:
                 if event.type == ALIENSHOOT:
                     game.alien_shoot()
-                
-
+        
         if game.game_active:
             game.run()
         else:
             game.state_manager()
-
-       
-
         pygame.display.flip()
         clock.tick(120)
             
