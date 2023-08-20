@@ -1,7 +1,7 @@
 # STAR-SHOOTER
 <---- released on 18th August 2023 -----><br/>
 
-Star Shooter v1.0 is Space Invader inspired fixed shooter game, in which player shoots the 'invaders' or aliens via lasers fired through StarShip. The invaders keeps spawning in different patterns until a win or lose event is triggered.
+Star Shooter v0.0.1-alpha is Space Invader inspired fixed shooter game, in which player shoots the 'invaders' or aliens via lasers fired through StarShip. The invaders keeps spawning in different patterns until a win or lose event is triggered.
 this is my first video game.
 
 ## Controls
